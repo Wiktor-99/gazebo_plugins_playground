@@ -1297,37 +1297,37 @@
         </right_track>
         <tracks_separation>0.4</tracks_separation>
         <tracks_height>0.18094</tracks_height>
-        <steering_efficiency>0.5</steering_efficiency>
+        <steering_efficiency>0.7</steering_efficiency>
       </plugin>
       <plugin name='gz::sim::systems::TrackController' filename='gz-sim-track-controller-system'>
         <link>left_track</link>
         <min_velocity>-1.0</min_velocity>
-        <max_velocity>1.0</max_velocity>
+        <max_velocity>3.0</max_velocity>
       </plugin>
       <plugin name='gz::sim::systems::TrackController' filename='gz-sim-track-controller-system'>
         <link>right_track</link>
         <min_velocity>-1.0</min_velocity>
-        <max_velocity>1.0</max_velocity>
+        <max_velocity>3.0</max_velocity>
       </plugin>
       <plugin name='gz::sim::systems::TrackController' filename='gz-sim-track-controller-system'>
         <link>front_left_flipper</link>
         <min_velocity>-1.0</min_velocity>
-        <max_velocity>1.0</max_velocity>
+        <max_velocity>3.0</max_velocity>
       </plugin>
       <plugin name='gz::sim::systems::TrackController' filename='gz-sim-track-controller-system'>
         <link>rear_left_flipper</link>
         <min_velocity>-1.0</min_velocity>
-        <max_velocity>1.0</max_velocity>
+        <max_velocity>3.0</max_velocity>
       </plugin>
       <plugin name='gz::sim::systems::TrackController' filename='gz-sim-track-controller-system'>
         <link>front_right_flipper</link>
         <min_velocity>-1.0</min_velocity>
-        <max_velocity>1.0</max_velocity>
+        <max_velocity>3.0</max_velocity>
       </plugin>
       <plugin name='gz::sim::systems::TrackController' filename='gz-sim-track-controller-system'>
         <link>rear_right_flipper</link>
         <min_velocity>-1.0</min_velocity>
-        <max_velocity>1.0</max_velocity>
+        <max_velocity>3.0</max_velocity>
       </plugin>
       <plugin name='gz::sim::systems::TriggeredPublisher' filename='gz-sim-triggered-publisher-system'>
         <input type='gz.msgs.Int32' topic='/keyboard/keypress'>
@@ -1396,6 +1396,10 @@
               <size>1 0.17499999999999999 0.074999999999999997</size>
             </box>
           </geometry>
+          <material>
+            <ambient> .6 .6 .6  1.0</ambient>
+            <diffuse> .7 .7 .7  1.0</diffuse>
+          </material>
           <meta>
             <layer>0</layer>
           </meta>
@@ -1422,6 +1426,10 @@
               <size>1 0.17499999999999999 0.074999999999999997</size>
             </box>
           </geometry>
+          <material>
+            <ambient> .6 .6 .6  1.0</ambient>
+            <diffuse> .7 .7 .7  1.0</diffuse>
+          </material>
           <meta>
             <layer>0</layer>
           </meta>
@@ -1448,6 +1456,10 @@
               <size>1 0.17499999999999999 0.074999999999999997</size>
             </box>
           </geometry>
+          <material>
+            <ambient> .6 .6 .6  1.0</ambient>
+            <diffuse> .7 .7 .7  1.0</diffuse>
+          </material>
           <meta>
             <layer>0</layer>
           </meta>
@@ -1474,6 +1486,10 @@
               <size>1 0.17499999999999999 0.074999999999999997</size>
             </box>
           </geometry>
+          <material>
+            <ambient> .6 .6 .6  1.0</ambient>
+            <diffuse> .7 .7 .7  1.0</diffuse>
+          </material>
           <meta>
             <layer>0</layer>
           </meta>
@@ -1500,6 +1516,10 @@
               <size>1 0.17499999999999999 0.074999999999999997</size>
             </box>
           </geometry>
+          <material>
+            <ambient> .6 .6 .6  1.0</ambient>
+            <diffuse> .7 .7 .7  1.0</diffuse>
+          </material>
           <meta>
             <layer>0</layer>
           </meta>
@@ -1526,6 +1546,10 @@
               <size>1 0.17499999999999999 0.074999999999999997</size>
             </box>
           </geometry>
+          <material>
+            <ambient> .6 .6 .6  1.0</ambient>
+            <diffuse> .7 .7 .7  1.0</diffuse>
+          </material>
           <meta>
             <layer>0</layer>
           </meta>
@@ -1552,6 +1576,10 @@
               <size>1 0.17499999999999999 0.074999999999999997</size>
             </box>
           </geometry>
+          <material>
+            <ambient> .6 .6 .6  1.0</ambient>
+            <diffuse> .7 .7 .7  1.0</diffuse>
+          </material>
           <meta>
             <layer>0</layer>
           </meta>
@@ -1578,6 +1606,10 @@
               <size>1 0.17499999999999999 0.074999999999999997</size>
             </box>
           </geometry>
+          <material>
+            <ambient> .6 .6 .6  1.0</ambient>
+            <diffuse> .7 .7 .7  1.0</diffuse>
+          </material>
           <meta>
             <layer>0</layer>
           </meta>
@@ -1604,6 +1636,10 @@
               <size>1 0.17499999999999999 0.074999999999999997</size>
             </box>
           </geometry>
+          <material>
+            <ambient> .6 .6 .6  1.0</ambient>
+            <diffuse> .7 .7 .7  1.0</diffuse>
+          </material>
           <meta>
             <layer>0</layer>
           </meta>
@@ -1630,6 +1666,10 @@
               <size>1 0.17499999999999999 0.074999999999999997</size>
             </box>
           </geometry>
+          <material>
+            <ambient> .6 .6 .6  1.0</ambient>
+            <diffuse> .7 .7 .7  1.0</diffuse>
+          </material>
           <meta>
             <layer>0</layer>
           </meta>
@@ -1656,6 +1696,10 @@
               <size>1 0.17499999999999999 0.074999999999999997</size>
             </box>
           </geometry>
+          <material>
+            <ambient> .6 .6 .6  1.0</ambient>
+            <diffuse> .7 .7 .7  1.0</diffuse>
+          </material>
           <meta>
             <layer>0</layer>
           </meta>
@@ -1682,6 +1726,10 @@
               <size>1 0.17499999999999999 0.074999999999999997</size>
             </box>
           </geometry>
+          <material>
+            <ambient> .6 .6 .6  1.0</ambient>
+            <diffuse> .7 .7 .7  1.0</diffuse>
+          </material>
           <meta>
             <layer>0</layer>
           </meta>
@@ -1708,6 +1756,10 @@
               <size>1 0.17499999999999999 0.074999999999999997</size>
             </box>
           </geometry>
+          <material>
+            <ambient> .6 .6 .6  1.0</ambient>
+            <diffuse> .7 .7 .7  1.0</diffuse>
+          </material>
           <meta>
             <layer>0</layer>
           </meta>
@@ -1734,6 +1786,10 @@
               <size>1 0.17499999999999999 0.074999999999999997</size>
             </box>
           </geometry>
+          <material>
+            <ambient> .6 .6 .6  1.0</ambient>
+            <diffuse> .7 .7 .7  1.0</diffuse>
+          </material>
           <meta>
             <layer>0</layer>
           </meta>
@@ -1760,6 +1816,10 @@
               <size>1 0.17499999999999999 0.074999999999999997</size>
             </box>
           </geometry>
+          <material>
+            <ambient> .6 .6 .6  1.0</ambient>
+            <diffuse> .7 .7 .7  1.0</diffuse>
+          </material>
           <meta>
             <layer>0</layer>
           </meta>
@@ -1786,6 +1846,10 @@
               <size>1 0.17499999999999999 0.074999999999999997</size>
             </box>
           </geometry>
+          <material>
+            <ambient> .6 .6 .6  1.0</ambient>
+            <diffuse> .7 .7 .7  1.0</diffuse>
+          </material>
           <meta>
             <layer>0</layer>
           </meta>
@@ -1812,6 +1876,10 @@
               <size>1 0.17499999999999999 0.074999999999999997</size>
             </box>
           </geometry>
+          <material>
+            <ambient> .6 .6 .6  1.0</ambient>
+            <diffuse> .7 .7 .7  1.0</diffuse>
+          </material>
           <meta>
             <layer>0</layer>
           </meta>
@@ -1838,6 +1906,10 @@
               <size>1 0.17499999999999999 0.074999999999999997</size>
             </box>
           </geometry>
+          <material>
+            <ambient> .6 .6 .6  1.0</ambient>
+            <diffuse> .7 .7 .7  1.0</diffuse>
+          </material>
           <meta>
             <layer>0</layer>
           </meta>
@@ -1864,6 +1936,10 @@
               <size>1 0.17499999999999999 0.074999999999999997</size>
             </box>
           </geometry>
+          <material>
+            <ambient> .6 .6 .6  1.0</ambient>
+            <diffuse> .7 .7 .7  1.0</diffuse>
+          </material>
           <meta>
             <layer>0</layer>
           </meta>
@@ -1890,6 +1966,10 @@
               <size>1 0.17499999999999999 0.074999999999999997</size>
             </box>
           </geometry>
+          <material>
+            <ambient> .6 .6 .6  1.0</ambient>
+            <diffuse> .7 .7 .7  1.0</diffuse>
+          </material>
           <meta>
             <layer>0</layer>
           </meta>
@@ -1975,6 +2055,10 @@
               <size>0.84999999999999998 0.14999999999999999 0.5</size>
             </box>
           </geometry>
+	  <material>
+            <ambient> .6 .6 .6  1.0</ambient>
+            <diffuse> .7 .7 .7  1.0</diffuse>
+          </material>
         </visual>
         <pose>0 0 0 0 0 0</pose>
         <inertial>
