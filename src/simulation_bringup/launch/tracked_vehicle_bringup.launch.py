@@ -16,7 +16,7 @@ def generate_launch_description():
     declared_arguments = [
         DeclareLaunchArgument(
             "world",
-            default_value=os.path.join(simulation_bringup_path, "worlds", "default_world.sdf"),
+            default_value=os.path.join(simulation_bringup_path, "worlds", "tracked_vehicle_world.sdf"),
             description="Robot controller to start.",
         )
     ]
