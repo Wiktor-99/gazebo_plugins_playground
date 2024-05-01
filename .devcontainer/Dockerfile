@@ -28,12 +28,7 @@ RUN sudo wget https://packages.osrfoundation.org/gazebo.gpg -O /usr/share/keyrin
     bash-completion \
     ros-$ROS_DISTRO-xacro \
     ros-$ROS_DISTRO-teleop-twist-keyboard \
-    ros-$ROS_DISTRO-teleop-twist-joy \
     ros-$ROS_DISTRO-gz-ros2-control \
-    ros-$ROS_DISTRO-controller-manager \
-    ros-$ROS_DISTRO-ros2-control \
-    ros-$ROS_DISTRO-ros2-controllers \
-    ros-$ROS_DISTRO-robot-localization \
     ros-$ROS_DISTRO-ros-gzharmonic-sim \
     ros-$ROS_DISTRO-ros-gzharmonic-bridge  \
     && rm -rf /var/lib/apt/lists/*
