@@ -13,13 +13,11 @@ import os
 
 def generate_launch_description():
     simulation_bringup_path = get_package_share_directory('simulation_bringup')
-    declared_arguments = [
-        DeclareLaunchArgument(
-            "world",
-            default_value=os.path.join(simulation_bringup_path, "worlds", "tracked_vehicle_world.sdf"),
-            description="Robot controller to start.",
-        )
-    ]
+    world_arguments = DeclareLaunchArgument(
+        "world",
+        default_value=os.path.join(simulation_bringup_path, "worlds", "tracked_vehicle_world.sdf"),
+        description="Robot controller to start.",
+    )
 
     gazebo = IncludeLaunchDescription(
         os.path.join(get_package_share_directory("ros_gz_sim"), 'launch', 'gz_sim.launch.py'),
@@ -35,8 +33,8 @@ def generate_launch_description():
     )
 
     return LaunchDescription(
-        declared_arguments +
         [
+            world_arguments,
             ign_bridge,
             gazebo
         ])
