@@ -1295,6 +1295,7 @@
         <right_track>
           <link>rear_right_flipper</link>
         </right_track>
+        <topic>cmd_vel</topic>
         <tracks_separation>0.4</tracks_separation>
         <tracks_height>0.18094</tracks_height>
         <steering_efficiency>0.7</steering_efficiency>
