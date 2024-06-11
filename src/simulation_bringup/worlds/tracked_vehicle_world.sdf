@@ -8,6 +8,7 @@
     <plugin name='gz::sim::systems::Physics' filename='gz-sim-physics-system'/>
     <plugin name='gz::sim::systems::UserCommands' filename='gz-sim-user-commands-system'/>
     <plugin name='gz::sim::systems::SceneBroadcaster' filename='gz-sim-scene-broadcaster-system'/>
+    <plugin filename="gz-sim-imu-system" name="gz::sim::systems::Imu"/>
     <scene>
       <ambient>1 1 1 1</ambient>
       <background>0.800000012 0.800000012 0.800000012 1</background>
@@ -235,6 +236,12 @@
         <gravity>true</gravity>
         <kinematic>false</kinematic>
         <enable_wind>false</enable_wind>
+        <sensor name="imu_sensor" type="imu">
+          <always_on>1</always_on>
+          <update_rate>1</update_rate>
+          <visualize>true</visualize>
+          <topic>imu</topic>
+        </sensor>
       </link>
       <link name='left_track'>
         <pose>0 0.19850000000000001 -1.3877787807814457e-17 -6.6174449004242214e-24 -3.2182495707141233e-23 -8.6736173798840355e-19</pose>
