@@ -31,6 +31,7 @@ RUN sudo wget https://packages.osrfoundation.org/gazebo.gpg -O /usr/share/keyrin
     ros-$ROS_DISTRO-gz-ros2-control \
     ros-$ROS_DISTRO-ros-gzharmonic-sim \
     ros-$ROS_DISTRO-ros-gzharmonic-bridge  \
+    ros-$ROS_DISTRO-robot-localization \
     && rm -rf /var/lib/apt/lists/*
 ENV DEBIAN_FRONTEND=dialog
 
