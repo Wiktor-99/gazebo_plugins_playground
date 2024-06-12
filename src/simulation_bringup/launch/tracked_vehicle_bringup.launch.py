@@ -32,9 +32,21 @@ def generate_launch_description():
         output="screen",
     )
 
+    robot_localization_node = Node(
+        package='robot_localization',
+        executable='ekf_node',
+        name='ekf_filter_node',
+        output='screen',
+        parameters=[
+            os.path.join(simulation_bringup_path, 'config', 'ekf.yaml'),
+            {'use_sim_time' : True}
+        ]
+    )
+
     return LaunchDescription(
         [
             world_arguments,
             ign_bridge,
-            gazebo
+            gazebo,
+            robot_localization_node
         ])
