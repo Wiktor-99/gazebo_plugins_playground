@@ -69,6 +69,14 @@ def generate_launch_description():
         output="screen",
     )
 
+    rviz2 = Node(
+        package="rviz2",
+        executable="rviz2",
+        name="rviz2",
+        arguments=["-d", os.path.join(simulation_bringup_path, 'rviz', 'tracked.rviz')],
+        output="screen",
+    )
+
     return LaunchDescription(
         [
             world_arguments,
@@ -76,5 +84,6 @@ def generate_launch_description():
             gazebo,
             robot_localization_node,
             robot_state_publisher,
-            gazebo_spawn_robot
+            gazebo_spawn_robot,
+            rviz2
         ])
