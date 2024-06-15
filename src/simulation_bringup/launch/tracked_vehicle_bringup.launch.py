@@ -4,12 +4,18 @@ from launch.actions import (
     IncludeLaunchDescription,
 )
 from launch.substitutions import (
-    Command,
     LaunchConfiguration
 )
 from ament_index_python.packages import get_package_share_directory
 from launch_ros.actions import Node
 import os
+
+
+def load_robot_description(path_to_sdf_file):
+    with open(path_to_sdf_file, 'r') as sdf_file:
+        robot_description = sdf_file.read()
+
+    return robot_description
 
 
 def generate_launch_description():
@@ -19,11 +25,6 @@ def generate_launch_description():
         default_value=os.path.join(simulation_bringup_path, "worlds", "tracked_vehicle_world.sdf"),
         description="Robot controller to start.",
     )
-
-    sdf_file = os.path.join(simulation_bringup_path, 'models', 'tracked.sdf')
-
-    with open(sdf_file, 'r') as infp:
-        robot_description = infp.read()
 
     gazebo = IncludeLaunchDescription(
         os.path.join(get_package_share_directory("ros_gz_sim"), 'launch', 'gz_sim.launch.py'),
@@ -54,7 +55,7 @@ def generate_launch_description():
         executable="robot_state_publisher",
         output="both",
         parameters=[
-            {'robot_description': robot_description},
+            {'robot_description': load_robot_description(os.path.join(simulation_bringup_path, 'models', 'tracked.sdf'))},
             {'use_sim_time' : True}
 
         ],
