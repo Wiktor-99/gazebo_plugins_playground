@@ -33,11 +33,19 @@ RUN sudo wget https://packages.osrfoundation.org/gazebo.gpg -O /usr/share/keyrin
     ros-$ROS_DISTRO-ros-gzharmonic-bridge  \
     ros-$ROS_DISTRO-robot-localization \
     && rm -rf /var/lib/apt/lists/*
+
+RUN . /opt/ros/${ROS_DISTRO}/setup.sh && \
+    mkdir -p /sdformat_urdf/src && \
+    cd /sdformat_urdf/src && \
+    git clone --branch iron https://github.com/ros/sdformat_urdf.git && \
+    cd /sdformat_urdf && \
+    colcon build
 ENV DEBIAN_FRONTEND=dialog
 
 RUN echo "if [ -f /opt/ros/${ROS_DISTRO}/setup.bash ]; then source /opt/ros/${ROS_DISTRO}/setup.bash; fi" >> /home/$USERNAME/.bashrc \
     && echo "if [ -f /usr/share/colcon_argcomplete/hook/colcon-argcomplete.bash ]; then source /usr/share/colcon_argcomplete/hook/colcon-argcomplete.bash; fi" >> /home/$USERNAME/.bashrc \
-    &&echo "if [ -f ${WORKSPACE}/install/setup.bash ]; then source ${WORKSPACE}/install/setup.bash; fi" >> /home/ros/.bashrc
+    && echo "if [ -f ${WORKSPACE}/install/setup.bash ]; then source ${WORKSPACE}/install/setup.bash; fi" >> /home/ros/.bashrc \
+    && echo "if [ -f /sdformat_urdf/install/setup.bash ]; then source /sdformat_urdf/install/setup.bash; fi" >> /home/ros/.bashrc
 
 USER $USERNAME
 CMD ["/bin/bash"]
