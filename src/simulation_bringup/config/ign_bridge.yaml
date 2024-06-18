@@ -16,6 +16,13 @@
   gz_type_name: "gz.msgs.Odometry"
   direction: GZ_TO_ROS
 
+- ros_topic_name: "tracked_pose"
+  gz_topic_name: "/model/tracked_robot/pose"
+  ros_type_name: "geometry_msgs/msg/Pose"
+  gz_type_name: "gz.msgs.Pose"
+  direction: GZ_TO_ROS
+
 - topic_name: "imu"
   ros_type_name: "sensor_msgs/msg/Imu"
   gz_type_name: "gz.msgs.IMU"
+

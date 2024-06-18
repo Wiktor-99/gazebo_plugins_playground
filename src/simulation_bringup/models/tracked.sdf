@@ -1061,6 +1061,12 @@
         <min_velocity>-1.0</min_velocity>
         <max_velocity>3.0</max_velocity>
       </plugin>
+          <plugin name='gz::sim::systems::PosePublisher' filename='gz-sim-pose-publisher-system'>
+          <publish_link_pose>true</publish_link_pose>
+          <publish_collision_pose>false</publish_collision_pose>
+          <publish_visual_pose>false</publish_visual_pose>
+          <publish_nested_model_pose>false</publish_nested_model_pose>
+      </plugin>
       <static>false</static>
       <self_collide>false</self_collide>
     </model>
